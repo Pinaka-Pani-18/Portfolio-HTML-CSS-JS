@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar container">
+            <div class="logo"><span>D</span>eveloper<span>P</span>ani</div>
+            <input type="checkbox" id="nav_check" hidden>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#home" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="nav_check" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- HOME SECTION -->
+        <section id="home">
+            <div class="home-content">
+                <h4>Hi👋, I am</h4>
+                <h2>Developer Pani</h2>
+                <div class="cursor">
+                    <p class="text-type"></p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt mollitia nulla nisi adipisci modi
+                    in?</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+                <button class="myWorks-btn"><a href="">My Works</a></button>
+            </div>
+            <div class="home-logo">
+                <img src="images/Home-image.png" alt="Heart-home_section">
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section id="about">
+            <h1 class="section-name">About Me</h1>
+            <div class="about-container">
+                <div class="about-logo">
+                    <img src="images/about-image.png" alt="Heart-home_section">
+                </div>
+                <div class="about-content">
+                    <p>At HeartStrongHub, we're passionate about heart health care. Our team of experts is dedicated to
+                        providing you with the knowledge, resources, and support you need to achieve optimal heart
+                        health
+                        and live your best life.</p>
+
+                    <p>Our team includes cardiologists, nutritionists, fitness trainers, and other healthcare
+                        professionals
+                        who are leaders in their respective fields. We're committed to staying up-to-date with the
+                        latest
+                        research and best practices in heart health care, and use this knowledge to develop
+                        evidence-based
+                        recommendations and practical advice.</p>
+
+                    <p>Whether you're looking to prevent heart disease, manage a heart condition, or optimize your heart
+                        health, we're here to help. We offer a range of resources and services, including articles,
+                        videos, interactive tools, and personalized coaching, to support you on your heart health
+                        journey.</p>
+
+                    <button class="knowMore-btn"><a href="">Know More</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+
+        <section id="contact" class="contact">
+            <h1>Contact</h1>
+            <div class="content container">
+                <div class="left-side">
+                    <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">Naidupeta, Nellore Dt,</div>
+                        <div class="text-two">Andhra Pradesh.</div>
+                    </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">+91 6300760104</div>
+                    </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-one">developerpani1806@gmail.com</div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">Send us a message</div>
+                    <p>If you have any work from me or any types of quries related to my tutorial, you can send me
+                        message
+                        from here. It's my pleasure to help you.</p>
+                    <form method="POST" action="" target="_blank">
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your name">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email">
+                        </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your phone number">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea placeholder="Enter your message"></textarea>
+                        </div>
+                        <div class="sendNow-btn">
+                            <input type="button" value="Send Now">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
