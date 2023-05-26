@@ -7,6 +7,23 @@ aEls.forEach((aEl)=>{
     })
 })
 
+
+// Hamburger 
+const menuEl = document.querySelector("#menu");
+const navEL = document.querySelector("header nav")
+
+menuEl.addEventListener("click",(e)=>{
+    menuEl.classList.toggle('fa-times');
+    navEL.classList.toggle('checked');
+});
+
+
+
+
+
+
+// Text Typing
+
 var typed = new Typed('.text-type', {
     strings: ["Web Developer", "Programmer", "Open Source Contributor", "Youtuber"],
     typeSpeed: 100,

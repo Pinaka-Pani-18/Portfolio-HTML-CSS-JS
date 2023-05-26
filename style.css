@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  outline: none;
+  resize: none;
+  text-transform: capitalize;
   font-family: "Poppins", sans-serif;
 }
 
@@ -12,25 +18,19 @@
   --second: #c3bef7;
   --third: #8a4fff;
   --fourth: #07020d;
+  --fifth: #e8e9f3;
+  --sixth: #1d263b;
 }
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--first);
   color: var(--fourth);
-  font-size: 2rem;
-  box-shadow: inset 0 0 100px var(--second);
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
+  font-size: 1.6rem;
 }
 
 button {
@@ -73,7 +73,8 @@ h1::before {
   content: "";
   position: absolute;
   bottom: -2px;
-  background-color: var(--fourth);
+  background-color: var(--sixth);
+  border-radius: 50px;
   height: 4px;
   left: 25%;
   width: 50%;
@@ -97,22 +98,31 @@ h1::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 70px;
+  width: 100%;
 }
 
 header {
   background: var(--first);
-  width: 100%;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 100;
-  box-shadow: inset 0 0 20px var(--second), 0 0px 100px var(--second);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 header .logo {
-  font-size: 30px;
-  color: var(--fourth);
+  font-size: 2rem;
+  color: var(--sixth);
   font-weight: 600;
+}
+
+header .logo i {
+  font-size: 1.6rem;
+  margin-right: 0.3rem;
 }
 
 header .logo span {
@@ -124,61 +134,99 @@ header nav ul {
 }
 
 header nav ul li a {
+  font-size: 1.5rem;
   display: inline-block;
-  color: var(--fourth);
+  color: var(--sixth);
   padding: 5px 0;
   margin: 0 10px;
   font-weight: 500;
   border: 3px solid transparent;
   text-transform: uppercase;
-  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
 header nav ul li a:hover,
 header nav ul li a.active {
   color: var(--third);
+  border-bottom: 3px solid var(--third);
 }
 
-.hamburger {
-  cursor: pointer;
-  display: none;
+header nav ul li a:hover {
+  margin-top: -5px;
 }
-.hamburger div {
-  width: 30px;
-  height: 3px;
-  margin: 5px 0;
-  background: var(--fourth);
+
+#menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.fa-bars {
+  animation: rotateBack 0.2s linear;
+}
+
+@keyframes rotateBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
 }
 
 @media only screen and (max-width: 900px) {
-  .hamburger {
+  #menu {
     display: block;
   }
 
   header nav {
     position: absolute;
     left: -100%;
-    top: 70px;
-    width: 100%;
+    top: 60px;
+    width: 60%;
+    height: 100vh;
+    text-align: center;
     background: #fff;
     padding: 30px;
     transition: 0.3s;
-    box-shadow: inset 0 0 50px var(--second);
   }
-  header #nav_check:checked ~ nav {
+
+  header nav.checked {
     left: 0;
   }
+
+  .fa-times {
+    animation: rotateFront 0.3s linear;
+  }
+
+  @keyframes rotateFront {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
   header nav ul {
     display: block;
   }
   header nav ul li a {
     margin: 5px 0;
   }
+  header nav ul li a:hover {
+    margin-top: 5px;
+  }
 }
 
 /* Main Container */
 
 /* Home Section */
+
+.home {
+  background-color: var(--fifth);
+}
 
 #home {
   display: flex;
@@ -190,23 +238,56 @@ header nav ul li a.active {
 #home .home-content {
   width: 60%;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 #home .home-content h2 {
-  font-size: 7rem;
+  font-size: 5rem;
+  color: var(--sixth);
+}
+
+#home .home-content h2 .wave {
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  display: inline-block;
+  transform-origin: 80% 80%;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#home .home-content h2 .name {
   color: var(--third);
 }
-
 #home .home-content p {
-  font-size: 2rem;
-  position: sticky;
-}
-
-.cursor {
-  display: flex;
+  font-size: 20px;
+  align-self: flex-start;
 }
 
 #home .home-logo {
@@ -280,7 +361,6 @@ header nav ul li a.active {
 }
 
 #about .about-container .about-content p {
-  /* font-size: 1.5rem; */
   text-align: justify;
 }
 
