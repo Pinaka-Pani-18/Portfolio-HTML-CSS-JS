@@ -16,10 +16,10 @@
 :root {
   --first: #ffffff;
   --second: #c3bef7;
-  --third: #8a4fff;
-  --fourth: #07020d;
-  --fifth: #e8e9f3;
-  --sixth: #1d263b;
+  --third: #d500ff;
+  --fourth: #5100ff;
+  --fifth: #fff7f7;
+  --sixth: #2b3a67;
 }
 
 html {
@@ -27,19 +27,23 @@ html {
   overflow-x: hidden;
 }
 
+*::selection {
+  background: var(--fourth);
+  color: var(--first);
+}
+
 body {
   background-color: var(--first);
-  color: var(--fourth);
+  color: var(--sixth);
   font-size: 1.6rem;
 }
 
 button {
-  background-color: var(--third);
-  color: var(--first);
-  padding: 10px 20px;
-  text-transform: uppercase;
+  font-size: 16px;
+  background-color: var(--fourth);
+  padding: 10px 30px;
   border: none;
-  border: 2px solid var(--third);
+  border: 2px solid var(--fourth);
   border-radius: 5px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -47,23 +51,44 @@ button {
 }
 
 button:hover {
-  color: var(--third);
-  background-color: var(--first);
-  border: 2px solid var(--third);
+  color: var(--fourth);
+  background-color: transparent;
+  border: 2px solid var(--fourth);
 }
 
 button a {
+  text-transform: uppercase;
   color: var(--first);
 }
 
 button:hover a {
-  color: var(--third);
+  color: var(--fourth);
+}
+
+button a i {
+  margin-left: 10px;
+  animation: arrowMove 1s infinite;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  90% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 h1 {
   margin-bottom: 5rem;
   text-align: center;
-  color: var(--third);
+  color: var(--fourth);
   font-size: 4rem;
   font-weight: 500;
   position: relative;
@@ -76,8 +101,12 @@ h1::before {
   background-color: var(--sixth);
   border-radius: 50px;
   height: 4px;
-  left: 25%;
+  left: 35%;
   width: 50%;
+}
+
+h1 i {
+  color: var(--sixth);
 }
 
 .container {
@@ -118,6 +147,11 @@ header .logo {
   font-size: 2rem;
   color: var(--sixth);
   font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+header .logo:hover {
+  color: var(--fourth);
 }
 
 header .logo i {
@@ -126,7 +160,7 @@ header .logo i {
 }
 
 header .logo span {
-  color: var(--third);
+  color: var(--fourth);
 }
 
 header nav ul {
@@ -148,8 +182,8 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a.active {
-  color: var(--third);
-  border-bottom: 3px solid var(--third);
+  color: var(--fourth);
+  border-bottom: 3px solid var(--fourth);
 }
 
 header nav ul li a:hover {
@@ -239,7 +273,11 @@ header nav ul li a:hover {
   width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
+}
+
+#home .home-content .Intro {
+  margin: -30px 0;
 }
 
 #home .home-content h2 {
@@ -283,11 +321,70 @@ header nav ul li a:hover {
 }
 
 #home .home-content h2 .name {
-  color: var(--third);
+  color: var(--fourth);
 }
 #home .home-content p {
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 30px;
   align-self: flex-start;
+}
+
+#home .home-content p .text-type {
+  color: var(--fourth);
+}
+
+#home .social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+#home .home-content ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--second);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#home .home-content ul li a {
+  font-size: 25px;
+  color: var(--fourth);
+  transition: all 0.1s ease-in-out;
+}
+
+#home .home-content ul li:hover a {
+  color: var(--first);
+}
+
+#home .home-content ul li:hover {
+  border: none;
+}
+
+#home .home-content ul li:nth-child(1):hover {
+  background-color: rgb(176, 14, 114);
+}
+
+#home .home-content ul li:nth-child(2):hover {
+  background-color: blue;
+}
+
+#home .home-content ul li:nth-child(3):hover {
+  background-color: rgb(3, 138, 191);
+}
+
+#home .home-content ul li:nth-child(4):hover {
+  background-color: red;
+}
+
+#home .home-content ul li:nth-child(5):hover {
+  background-color: rgb(3, 138, 191);
+}
+
+#home .home-content ul li:nth-child(6):hover {
+  background-color: black;
 }
 
 #home .home-logo {
@@ -296,17 +393,6 @@ header nav ul li a:hover {
   justify-content: center;
   width: 40%;
   animation: upDown 2s infinite alternate;
-}
-
-#home .socials {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-#home .home-content ul li a {
-  color: var(--third);
-  transition: all 0.2s ease-in-out;
 }
 
 @keyframes upDown {
@@ -445,7 +531,7 @@ header nav ul li a:hover {
 }
 .content .left-side .details i {
   font-size: 30px;
-  color: var(--third);
+  color: var(--fourth);
   margin-bottom: 10px;
 }
 .content .left-side .details .topic {
@@ -499,7 +585,7 @@ header nav ul li a:hover {
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
-  background: var(--third);
+  background: var(--fourth);
   cursor: pointer;
   transition: all 0.3s ease;
 }
