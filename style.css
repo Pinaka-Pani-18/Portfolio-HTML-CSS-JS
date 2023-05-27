@@ -501,6 +501,67 @@ header nav ul li a:hover {
   }
 }
 
+/* Skills Section */
+
+#skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#skills .skills-container {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+#skills .skills-container .skill {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  color: var(--first);
+  cursor: pointer;
+}
+
+#skills .skills-container .skill::before,
+#skills .skills-container .skill::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: var(--sixth);
+  z-index: -6;
+  border-radius: 20px;
+  transform: rotate(45deg);
+  transition: all 0.2s ease-in-out;
+}
+
+#skills .skills-container .skill:hover:after {
+  background-color: var(--second);
+  transform: rotate(90deg);
+  z-index: -99;
+}
+
+#skills .skills-container .skill img {
+  width: 50px;
+}
+
+#skills .skills-container .skill p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
 /* Contact Us */
 
 .contact {
