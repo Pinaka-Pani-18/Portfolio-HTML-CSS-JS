@@ -26,11 +26,17 @@ html {
   overflow-x: hidden;
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
   html {
     font-size: 50%;
   }
-} */
+}
 
 *::selection {
   background: var(--fourth);
@@ -44,12 +50,12 @@ body {
 }
 
 button {
-  font-size: 16px;
+  font-size: 1.6rem;
   background-color: var(--fourth);
-  padding: 10px 30px;
+  padding: 1rem 3rem;
   border: none;
-  border: 2px solid var(--fourth);
-  border-radius: 5px;
+  border: 0.2rem solid var(--fourth);
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   align-self: flex-start;
@@ -58,7 +64,7 @@ button {
 button:hover {
   color: var(--fourth);
   background-color: transparent;
-  border: 2px solid var(--fourth);
+  border: 0.2rem solid var(--fourth);
 }
 
 button a {
@@ -71,7 +77,7 @@ button:hover a {
 }
 
 button a i {
-  margin-left: 10px;
+  margin-left: 1rem;
   animation: arrowMove 1s infinite;
 }
 
@@ -80,18 +86,18 @@ button a i {
     transform: translateX(0);
   }
   40% {
-    transform: translateX(4px);
+    transform: translateX(0.4rem);
   }
   90% {
-    transform: translateX(-5px);
+    transform: translateX(-0.5rem);
   }
   100% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 
 h1 {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   text-align: center;
   color: var(--fourth);
   font-size: 4rem;
@@ -102,10 +108,10 @@ h1 {
 h1::before {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -0.2rem;
   background-color: var(--sixth);
-  border-radius: 50px;
-  height: 4px;
+  border-radius: 5rem;
+  height: 0.4rem;
   left: 35%;
   width: 50%;
 }
@@ -115,9 +121,9 @@ h1 i {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 130rem;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 3rem;
 }
 
 @media only screen and (max-width: 700px) {
@@ -138,14 +144,14 @@ h1 i {
 header {
   background: var(--first);
   width: 100vw;
-  height: 60px;
+  height: 6rem;
   display: flex;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
 }
 
 header .logo {
@@ -176,10 +182,10 @@ header nav ul li a {
   font-size: 1.5rem;
   display: inline-block;
   color: var(--sixth);
-  padding: 5px 0;
-  margin: 0 10px;
+  padding: 0.5rem 0;
+  margin: 0 1rem;
   font-weight: 500;
-  border: 3px solid transparent;
+  border: 0.3rem solid transparent;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   position: relative;
@@ -188,16 +194,16 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
   color: var(--fourth);
-  border-bottom: 3px solid var(--fourth);
+  border-bottom: 0.3rem solid var(--fourth);
 }
 
 header nav ul li a:hover {
-  margin-top: -5px;
+  margin-top: -0.5rem;
 }
 
 #menu {
   display: none;
-  font-size: 24px;
+  font-size: 2.4rem;
   cursor: pointer;
 }
 
@@ -222,12 +228,12 @@ header nav ul li a:hover {
   header nav {
     position: absolute;
     left: -100%;
-    top: 60px;
+    top: 6rem;
     width: 60%;
     height: 100vh;
     text-align: center;
     background: #fff;
-    padding: 30px;
+    padding: 3rem;
     transition: 0.3s;
   }
 
@@ -252,10 +258,10 @@ header nav ul li a:hover {
     display: block;
   }
   header nav ul li a {
-    margin: 5px 0;
+    margin: 0.5rem 0;
   }
   header nav ul li a:hover {
-    margin-top: 5px;
+    margin-top: 0.5rem;
   }
 }
 
@@ -282,7 +288,7 @@ header nav ul li a:hover {
 }
 
 #home .home-content .Intro {
-  margin: -30px 0;
+  margin: -3rem 0;
 }
 
 #home .home-content h2 {
@@ -330,7 +336,7 @@ header nav ul li a:hover {
 }
 #home .home-content p {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 3rem;
   align-self: flex-start;
 }
 
@@ -340,7 +346,7 @@ header nav ul li a:hover {
 
 #home .social-icons {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 #home .home-content ul li {
@@ -349,13 +355,13 @@ header nav ul li a:hover {
   justify-content: center;
   border-radius: 50%;
   background-color: var(--second);
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   cursor: pointer;
 }
 
 #home .home-content ul li a {
-  font-size: 25px;
+  font-size: 2.5rem;
   color: var(--fourth);
   transition: all 0.1s ease-in-out;
 }
@@ -369,7 +375,7 @@ header nav ul li a:hover {
 }
 
 #home .home-content ul li:nth-child(1):hover {
-  background-color: rgb(176, 14, 114);
+  background-color: rgb(250, 15, 215);
 }
 
 #home .home-content ul li:nth-child(2):hover {
@@ -403,10 +409,10 @@ header nav ul li a:hover {
 @keyframes upDown {
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(0rem);
   }
   100% {
-    transform: translateY(-40px);
+    transform: translateY(-4rem);
   }
 }
 
@@ -423,7 +429,18 @@ header nav ul li a:hover {
     width: 100%;
   }
   #home .home-logo {
-    margin-top: 8rem;
+    margin: 8rem 0;
+    width: 500px;
+  }
+  #home .home-logo img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #home .home-logo {
+    width: 400px;
+    margin-bottom: 4rem;
   }
 }
 
@@ -491,19 +508,24 @@ header nav ul li a:hover {
     margin-top: -8rem;
   }
   #about .about-container .about-logo {
-    width: 100%;
+    width: 650px;
+    margin: 2rem 0 5rem 0;
+  }
+  #about .about-container .about-logo img {
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: 700px) {
   #about .about-container .about-logo {
+    margin-top: 1rem;
     width: 100%;
   }
   #about .about-container .about-content {
     width: 100%;
   }
   #about .about-container .about-logo img {
-    width: 38rem;
+    width: 70%;
   }
 }
 
@@ -518,7 +540,7 @@ header nav ul li a:hover {
 }
 
 #education .education-container {
-  min-width: 800px;
+  min-width: 80rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -526,24 +548,24 @@ header nav ul li a:hover {
 }
 
 #education .education-container .education-box {
-  width: 400px;
-  padding: 20px 50px;
+  width: 40rem;
+  padding: 2rem 5rem;
   position: relative;
 }
 
 #education .education-container .education-box::after {
   content: "";
   position: absolute;
-  width: 4px;
+  width: 0.4rem;
   height: 100%;
   background-color: var(--sixth);
-  right: -2px;
+  right: -0.2rem;
   top: 0;
   z-index: -6;
 }
 
 #education .education-container .education-box:nth-child(2)::after {
-  left: -2px;
+  left: -0.2rem;
 }
 
 #education .education-container .education-box:nth-child(1) {
@@ -552,7 +574,7 @@ header nav ul li a:hover {
 
 #education .education-container .education-box:nth-child(2) {
   align-self: flex-end;
-  margin-left: -20px;
+  margin-left: -2rem;
 }
 
 #education .education-container .education-box:nth-child(3) {
@@ -563,14 +585,14 @@ header nav ul li a:hover {
   position: absolute;
   top: 15%;
   right: -6.5%;
-  font-size: 20px;
-  background-color: white;
-  width: 50px;
-  height: 50px;
+  font-size: 2rem;
+  background-color: var(--fifth);
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  border: 5px solid var(--fourth);
+  border: 0.5rem solid var(--fourth);
   text-align: center;
-  line-height: 40px;
+  line-height: 4rem;
 }
 
 #education .education-container .education-box:nth-child(2) i {
@@ -578,17 +600,17 @@ header nav ul li a:hover {
 }
 
 #education .education-container .education-box .box {
-  border: 4px solid var(--fourth);
-  padding: 0 10px;
-  border-radius: 10px;
+  border: 0.4rem solid var(--fourth);
+  padding: 0 1rem;
+  border-radius: 1rem;
   position: relative;
 }
 
 #education .education-container .education-box .box .arrow {
   position: absolute;
   content: "";
-  width: 30px;
-  height: 18px;
+  width: 3rem;
+  height: 1.8rem;
   background-color: var(--fourth);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   top: 15%;
@@ -601,9 +623,9 @@ header nav ul li a:hover {
   transform: rotate(270deg);
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 700px) {
   #education .education-container {
-    padding-right: 50px;
+    padding-right: 5rem;
   }
   #education .education-container .education-box:nth-child(1) {
     align-self: center;
@@ -640,18 +662,18 @@ header nav ul li a:hover {
 }
 
 #skills .skills-container {
-  max-width: 1000px;
+  max-width: 100rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 5rem;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 1rem;
 }
 
 #skills .skills-container .skill {
-  width: 150px;
-  height: 150px;
+  width: 15rem;
+  height: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -665,11 +687,11 @@ header nav ul li a:hover {
 #skills .skills-container .skill::after {
   content: "";
   position: absolute;
-  width: 120px;
-  height: 120px;
+  width: 12rem;
+  height: 12rem;
   background-color: var(--sixth);
   z-index: -6;
-  border-radius: 20px;
+  border-radius: 2rem;
   transform: rotate(45deg);
   transition: all 0.2s ease-in-out;
 }
@@ -681,12 +703,12 @@ header nav ul li a:hover {
 }
 
 #skills .skills-container .skill img {
-  width: 50px;
+  width: 5rem;
 }
 
 #skills .skills-container .skill p {
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
   font-weight: 500;
 }
 
@@ -701,36 +723,36 @@ header nav ul li a:hover {
 }
 
 #experience .experience-container {
-  max-width: 1200px;
+  max-width: 120rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 5rem;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 1rem;
   transition: 0.3s;
 }
 
 #experience .experience-container .experience-box {
   display: flex;
-  gap: 10px;
-  border: 4px solid var(--fourth);
+  gap: 1rem;
+  border: 0.4rem solid var(--fourth);
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 1rem;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
-  transform: translateX(4px) translateY(-4px);
-  box-shadow: -10px 10px var(--sixth);
+  transform: translateX(0.4rem) translateY(-0.4rem);
+  box-shadow: -1rem 1rem var(--sixth);
 }
 
 #experience .experience-container .experience-box:hover {
   transform: translateX(0) translateY(0);
-  box-shadow: 0px 0px transparent;
+  box-shadow: 0rem 0rem transparent;
 }
 
 #experience .experience-container .experience-box .image {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 15rem;
+  max-height: 15rem;
   overflow: hidden;
 }
 
@@ -743,8 +765,8 @@ header nav ul li a:hover {
 #experience .experience-container .experience-box .box-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 /* Projects */
@@ -758,25 +780,25 @@ header nav ul li a:hover {
 }
 
 #projects .projects-container {
-  max-width: 1200px;
+  max-width: 120rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 4rem;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 1rem;
 }
 
 #projects .menu {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 #projects .menu button {
-  margin: 10px 20px;
+  margin: 1rem 1rem;
   color: var(--fourth);
   background-color: var(--first);
 }
@@ -790,14 +812,14 @@ header nav ul li a:hover {
 #projects .projects-container .project-box {
   display: flex;
   flex-direction: column;
-  width: 300px;
-  border: 10px solid var(--sixth);
+  width: 30rem;
+  border: 1rem solid var(--sixth);
   background-color: var(--sixth);
-  border-radius: 50px 50px 25px 25px;
+  border-radius: 5rem 5rem 2.5rem 2.5rem;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease-in-out;
   /* transition: all 1s ease-in-out, display 1s ease-in-out 10s; */
 }
@@ -817,19 +839,19 @@ header nav ul li a:hover {
 #projects .projects-container .project-box h3 {
   position: relative;
   top: 0;
-  left: -2px;
-  width: 300px;
-  height: 50px;
-  line-height: 50px;
+  left: -0.2rem;
+  width: 30rem;
+  height: 5rem;
+  line-height: 5rem;
   text-align: center;
   background-color: var(--fourth);
   color: var(--first);
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 #projects .projects-container .project-box .image-box {
   width: 100%;
-  height: 200px;
+  height: 20rem;
   overflow: hidden;
 }
 
@@ -841,23 +863,23 @@ header nav ul li a:hover {
 }
 
 #projects .projects-container .project-box .box-content {
-  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   background-color: var(--first);
 }
 
 #projects .projects-container .project-box .buttons {
   position: absolute;
   width: 100%;
-  height: 135px;
+  height: 13.5rem;
   left: 0;
   bottom: -40%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--sixth);
-  gap: 10px;
+  gap: 1rem;
   flex-direction: column;
-  border-radius: 20px 20px 0 0;
+  border-radius: 2rem 2rem 0 0;
   transition: 0.3s;
 }
 
@@ -868,11 +890,19 @@ header nav ul li a:hover {
 }
 
 #projects .projects-container .project-box .buttons button:hover {
-  border: 2px solid white;
+  border: 0.2rem solid white;
+}
+
+#projects .projects-container .project-box .buttons button:hover a {
+  color: var(--first);
+}
+
+#projects .projects-container .project-box .buttons button a i {
+  animation: none;
 }
 
 #projects .projects-container .project-box:hover .buttons {
-  bottom: -10px;
+  bottom: -1rem;
 }
 
 /* .projects-shrink {
@@ -910,50 +940,50 @@ header nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 1.5rem;
   position: relative;
 }
 .content .left-side::before {
   content: "";
   position: absolute;
   height: 70%;
-  width: 2px;
-  right: -15px;
+  width: 0.2rem;
+  right: -1.5rem;
   top: 50%;
   transform: translateY(-50%);
   background: #afafb6;
 }
 .content .left-side .details {
-  margin: 14px;
+  margin: 1.4rem;
   text-align: center;
 }
 .content .left-side .details i {
-  font-size: 30px;
+  font-size: 3rem;
   color: var(--fourth);
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .content .left-side .details .topic {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 .content .left-side .details .text-one,
 .content .left-side .details .text-two {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #afafb6;
 }
 .contact .content .right-side {
   width: 75%;
-  margin-left: 75px;
+  margin-left: 7.5rem;
 }
 .content .right-side .topic-text {
-  font-size: 23px;
+  font-size: 2.3rem;
   font-weight: 600;
   color: var(--carmine-pink);
 }
 .right-side .input-box {
-  height: 50px;
+  height: 5rem;
   width: 100%;
-  margin: 12px 0;
+  margin: 1.2rem 0;
 }
 .right-side .input-box input,
 .right-side .input-box textarea {
@@ -961,28 +991,28 @@ header nav ul li a:hover {
   width: 100%;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 1.6rem;
   background: #f0f1f8;
-  border-radius: 6px;
-  padding: 0 15px;
+  border-radius: 0.6rem;
+  padding: 0 1.5rem;
   resize: none;
 }
 .right-side .message-box {
-  min-height: 110px;
+  min-height: 11rem;
 }
 .right-side .input-box textarea {
-  padding-top: 6px;
+  padding-top: 0.6rem;
 }
 .right-side .sendNow-btn {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 1.2rem;
 }
 .right-side .sendNow-btn input[type="button"] {
   color: white;
-  font-size: 18px;
+  font-size: 1.8rem;
   border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
   background: var(--fourth);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -996,7 +1026,7 @@ header nav ul li a:hover {
   justify-content: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 90rem) {
   .contact {
     width: 100%;
     margin-top: 5rem;
@@ -1007,7 +1037,7 @@ header nav ul li a:hover {
   .contact .content .left-side {
     width: 100%;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 4rem;
     justify-content: center;
     flex-wrap: wrap;
   }
