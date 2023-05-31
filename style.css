@@ -857,6 +857,7 @@ header nav ul li a:hover {
   position: relative;
   top: 0;
   left: -0.2rem;
+  font-weight: 500;
   width: 30rem;
   height: 5rem;
   line-height: 5rem;
@@ -1065,4 +1066,28 @@ header nav ul li a:hover {
     width: 100%;
     margin-left: 0;
   }
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--sixth);
+  color: var(--first);
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer h2 {
+  font-size: 1.8rem;
+  padding: 1.5rem 0;
+  font-weight: 500;
+}
+
+#footer h2 i {
+  margin: 0 1rem;
+  color: red;
 }
