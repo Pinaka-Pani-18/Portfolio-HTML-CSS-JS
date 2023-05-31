@@ -9,6 +9,7 @@
   border: none;
   outline: none;
   resize: none;
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
 
@@ -30,11 +31,20 @@ html {
   html {
     font-size: 56%;
   }
+  #about {
+    scroll-margin: 8rem;
+  }
+  #contact {
+    scroll-margin: 4rem;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   html {
     font-size: 50%;
+  }
+  #projects {
+    scroll-margin: 7rem;
   }
 }
 
@@ -659,6 +669,7 @@ header nav ul li a:hover {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  scroll-margin: 3rem;
 }
 
 #skills .skills-container {
@@ -710,6 +721,12 @@ header nav ul li a:hover {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 700px) {
+  #skills {
+    scroll-margin: 7rem;
+  }
 }
 
 /* Experience Section */
@@ -919,7 +936,7 @@ header nav ul li a:hover {
 
 /* Contact Us */
 
-.contact {
+#contact {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -927,13 +944,13 @@ header nav ul li a:hover {
   flex-direction: column;
 }
 
-.contact .content {
+#contact .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.contact .content .left-side {
+#contact .content .left-side {
   width: 25%;
   height: 100%;
   display: flex;
@@ -951,7 +968,7 @@ header nav ul li a:hover {
   right: -1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  background: #afafb6;
+  background: gray;
 }
 .content .left-side .details {
   margin: 1.4rem;
@@ -969,9 +986,9 @@ header nav ul li a:hover {
 .content .left-side .details .text-one,
 .content .left-side .details .text-two {
   font-size: 1.4rem;
-  color: #afafb6;
+  color: gray;
 }
-.contact .content .right-side {
+#contact .content .right-side {
   width: 75%;
   margin-left: 7.5rem;
 }
@@ -1017,9 +1034,9 @@ header nav ul li a:hover {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.sendNow-btn input[type="button"]:hover {
+/* .sendNow-btn input[type="button"]:hover {
   opacity: 0.8;
-}
+} */
 
 .LetsTalkBtn {
   display: flex;
@@ -1027,24 +1044,24 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 90rem) {
-  .contact {
+  #contact {
     width: 100%;
     margin-top: 5rem;
   }
-  .contact .content {
+  #contact .content {
     flex-direction: column-reverse;
   }
-  .contact .content .left-side {
+  #contact .content .left-side {
     width: 100%;
     flex-direction: row;
     margin-top: 4rem;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .contact .content .left-side::before {
+  #contact .content .left-side::before {
     display: none;
   }
-  .contact .content .right-side {
+  #contact .content .right-side {
     width: 100%;
     margin-left: 0;
   }
