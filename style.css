@@ -503,6 +503,10 @@ header nav ul li a:hover {
   margin-top: 2rem;
 }
 
+.about .resumeBtn a i {
+  animation: none;
+}
+
 @media only screen and (max-width: 900px) {
   .about {
     margin-top: 2rem;
@@ -1005,7 +1009,19 @@ header nav ul li a:hover {
   height: 5rem;
   width: 100%;
   margin: 1.2rem 0;
+  position: relative;
 }
+.right-side .input-box i {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.right-side .input-box .fa-message {
+  top: 2rem;
+}
+
 .right-side .input-box input,
 .right-side .input-box textarea {
   height: 100%;
@@ -1015,39 +1031,25 @@ header nav ul li a:hover {
   font-size: 1.6rem;
   background: #f0f1f8;
   border-radius: 0.6rem;
-  padding: 0 1.5rem;
+  padding: 0 4.5rem;
   resize: none;
 }
+
 .right-side .message-box {
   min-height: 11rem;
 }
 .right-side .input-box textarea {
   padding-top: 0.6rem;
 }
-.right-side .sendNow-btn {
-  display: inline-block;
-  margin-top: 1.2rem;
-}
-.right-side .sendNow-btn input[type="button"] {
-  color: white;
-  font-size: 1.8rem;
-  border: none;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.6rem;
-  background: var(--fourth);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-/* .sendNow-btn input[type="button"]:hover {
-  opacity: 0.8;
-} */
-
 .LetsTalkBtn {
-  display: flex;
-  justify-content: center;
+  color: var(--first);
 }
 
-@media (max-width: 90rem) {
+.LetsTalkBtn i {
+  margin-left: 5px;
+}
+
+@media (max-width: 900px) {
   .contact {
     width: 100%;
     margin-top: 5rem;
