@@ -36,6 +36,46 @@ var typed = new Typed('.text-type', {
 const btnEls =document.querySelectorAll("#projects .menu .btn");
 const projectBoxEls =document.querySelectorAll(".project-box");
 
+// for(let i=1; i<btnEls.length; i++){
+//     btnEls[i].addEventListener("click",filterableFun);
+// }
+
+// function setActive(e){
+//     btnEls.forEach(btn=>{
+//         btn.classList.remove("activeProject");
+//     })
+//     e.target.classList.add("activeProject");
+// }
+
+// function filterableFun(e){
+//     setActive(e);
+
+//     projectBoxEls.forEach(projects =>{
+//         projects.classList.remove("projects-shrink");
+//         projects.classList.add("projects-expand");
+
+//         const btnType = e.target.dataset.name;
+//         console.log(btnType)
+//         const projectType = projects.dataset.project;
+//         console.log(projectType)
+
+//         if(btnType!==projectType){
+//             projects.classList.remove("projects-expand");
+//             projects.classList.add("projects-shrink");
+
+//         console.log("came")
+//         }
+//     })
+// }
+
+// btnEls[0].addEventListener("click",(e)=>{
+//     setActive(e);
+//     projectBoxEls.forEach(pro=>{
+//         pro.classList.remove("projects-shrink");
+//         pro.classList.add("projects-expand");
+//     })
+// })
+
 btnEls.forEach((btn)=>{
     btn.addEventListener("click",(e)=>{
 
@@ -43,14 +83,23 @@ document.querySelector(".activeProject").classList.remove("activeProject");
         btn.classList.add("activeProject");
 
         const name = e.target.dataset.name;
+        
         projectBoxEls.forEach((itemEl)=>{
+            // itemEl.classList.remove("projects-shrink");
+            // itemEl.classList.add("projects-expand");
             if(name==="all"){
                 itemEl.style.display = "block"
             }else{
                 if(itemEl.classList.contains(name)){
                     itemEl.style.display = "block"
+                    // itemEl.classList.add("projects-expand");
+                    // itemEl.classList.remove("projects-shrink");
+
                 }else{
                     itemEl.style.display = "none";
+                    // itemEl.classList.remove("projects-expand");
+                    // itemEl.classList.add("projects-shrink");
+
                 }
             }
         })

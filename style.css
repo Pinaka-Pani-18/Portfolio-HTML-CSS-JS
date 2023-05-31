@@ -791,57 +791,70 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   width: 300px;
-  border: 4px solid var(--sixth);
-  border-radius: 5px;
+  border: 10px solid var(--sixth);
+  background-color: var(--sixth);
+  border-radius: 50px 50px 25px 25px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-  transition: 0.3s;
-  /* transform: scale(0); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  /* transition: all 1s ease-in-out, display 1s ease-in-out 10s; */
 }
 
-#projects .projects-container .border-box {
+#projects .projects-container .project-box:hover img {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* #projects .projects-container .border-box {
   border: 5px dotted var(--sixth);
   border-radius: 0 0 5px 5px;
   padding: 3px;
-}
+  transition: all 0.3s ease-in-out, display 1s ease-in-out 10s;
+} */
 
 #projects .projects-container .project-box h3 {
-  width: 100%;
+  position: relative;
+  top: 0;
+  left: -2px;
+  width: 300px;
   height: 50px;
   line-height: 50px;
   text-align: center;
-  background-color: #2b3a67;
+  background-color: var(--fourth);
   color: var(--first);
-  border-radius: 0 0 5px 5px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 #projects .projects-container .project-box .image-box {
-  width: 292px;
+  width: 100%;
   height: 200px;
+  overflow: hidden;
 }
 
 #projects .projects-container .project-box .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease-in-out;
 }
 
 #projects .projects-container .project-box .box-content {
   padding: 5px 10px;
+  background-color: var(--first);
 }
 
 #projects .projects-container .project-box .buttons {
   position: absolute;
   width: 100%;
+  height: 135px;
   left: 0;
   bottom: -40%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--sixth);
-  height: 130px;
   gap: 10px;
   flex-direction: column;
   border-radius: 20px 20px 0 0;
@@ -859,8 +872,20 @@ header nav ul li a:hover {
 }
 
 #projects .projects-container .project-box:hover .buttons {
-  bottom: 0;
+  bottom: -10px;
 }
+
+/* .projects-shrink {
+  transform: scale(0);
+  transition: all 1s ease-in-out, display 1s ease-in-out 10s;
+  display: none;
+}
+
+.projects-expand {
+  transform: scale(1);
+  transition: all 1s ease-in-out, display 1s ease-in-out 10s;
+  display: block;
+} */
 
 /* Contact Us */
 
