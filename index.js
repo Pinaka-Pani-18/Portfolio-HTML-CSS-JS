@@ -1,3 +1,4 @@
+// Navbar active button 
 const aEls = document.querySelectorAll("nav ul li a");
 
 aEls.forEach((aEl)=>{
@@ -12,18 +13,13 @@ aEls.forEach((aEl)=>{
 const menuEl = document.querySelector("#menu");
 const navEL = document.querySelector("header nav")
 
-menuEl.addEventListener("click",(e)=>{
+menuEl.addEventListener("click",()=>{
     menuEl.classList.toggle('fa-times');
     navEL.classList.toggle('checked');
 });
 
 
-
-
-
-
 // Text Typing
-
 var typed = new Typed('.text-type', {
     strings: ["Web Developer", "Programmer", "Open Source Contributor", "Youtuber"],
     typeSpeed: 100,
@@ -108,21 +104,62 @@ document.querySelector(".activeProject").classList.remove("activeProject");
 
 
 // Disabling Inspect Element 
+// document.onkeydown = function(e) {
+//     if(event.keyCode == 123) {
+//     return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+//     return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+//     return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+//         return false;
+//         }
+//     if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+//     return false;
+//     }
+//     }
 
-document.onkeydown = function(e) {
-    if(event.keyCode == 123) {
-    return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-    return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-    return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
-        return false;
-        }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-    return false;
-    }
-    }
+
+// Scroll Spy
+// var section = document.querySelectorAll("section");
+// var sections = {};
+// var i = 0;
+
+// Array.prototype.forEach.call(section, function (e) {
+//     sections[e.id] = e.offsetTop;
+// });
+
+// window.onscroll = function () {
+//     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+//     console.log("Start")
+
+//     for (i in sections) {
+//         console.log(i)
+//         console.log(sections)
+//         console.log(scrollPosition)
+//         console.log(sections[i])
+//     if (sections[i] <= scrollPosition) {
+//         document.querySelector(".active").setAttribute("class", "");
+//         document.querySelector("a[href*=" + i + "]").setAttribute("class", "active");
+//     }
+//     }
+// };
+
+
+// reload
+// window.onresize =()=>{
+//     x = window.innerWidth; 
+//     y= window.innerHeight;
+//     e = false;
+//     if( x>850 && x<900 || x>650 && x<700 ){
+//         e = true;
+//     }
+//     if(e){
+//         location.reload();
+//         e = false;
+//     }
+// }

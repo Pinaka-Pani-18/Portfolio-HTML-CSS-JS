@@ -31,20 +31,17 @@ html {
   html {
     font-size: 56%;
   }
-  #about {
-    scroll-margin: 8rem;
-  }
-  #contact {
-    scroll-margin: 4rem;
+  * {
+    scroll-margin: 6rem;
   }
 }
 
 @media only screen and (max-width: 700px) {
+  * {
+    scroll-margin: 6rem;
+  }
   html {
     font-size: 50%;
-  }
-  #projects {
-    scroll-margin: 7rem;
   }
 }
 
@@ -279,34 +276,34 @@ header nav ul li a:hover {
 
 /* Home Section */
 
-.home {
+#home {
   background-color: var(--fifth);
 }
 
-#home {
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-#home .home-content {
+.home .home-content {
   width: 60%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
-#home .home-content .Intro {
+.home .home-content .Intro {
   margin: -3rem 0;
 }
 
-#home .home-content h2 {
+.home .home-content h2 {
   font-size: 5rem;
   color: var(--sixth);
 }
 
-#home .home-content h2 .wave {
+.home .home-content h2 .wave {
   animation-name: wave-animation;
   animation-duration: 2s;
   animation-iteration-count: infinite; /* Never stop waving :) */
@@ -341,25 +338,25 @@ header nav ul li a:hover {
   }
 }
 
-#home .home-content h2 .name {
+.home .home-content h2 .name {
   color: var(--fourth);
 }
-#home .home-content p {
+.home .home-content p {
   font-weight: 600;
   font-size: 3rem;
   align-self: flex-start;
 }
 
-#home .home-content p .text-type {
+.home .home-content p .text-type {
   color: var(--fourth);
 }
 
-#home .social-icons {
+.home .social-icons {
   display: flex;
   gap: 2rem;
 }
 
-#home .home-content ul li {
+.home .home-content ul li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -370,45 +367,45 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-#home .home-content ul li a {
+.home .home-content ul li a {
   font-size: 2.5rem;
   color: var(--fourth);
   transition: all 0.1s ease-in-out;
 }
 
-#home .home-content ul li:hover a {
+.home .home-content ul li:hover a {
   color: var(--first);
 }
 
-#home .home-content ul li:hover {
+.home .home-content ul li:hover {
   border: none;
 }
 
-#home .home-content ul li:nth-child(1):hover {
+.home .home-content ul li:nth-child(1):hover {
   background-color: rgb(250, 15, 215);
 }
 
-#home .home-content ul li:nth-child(2):hover {
+.home .home-content ul li:nth-child(2):hover {
   background-color: blue;
 }
 
-#home .home-content ul li:nth-child(3):hover {
+.home .home-content ul li:nth-child(3):hover {
   background-color: rgb(3, 138, 191);
 }
 
-#home .home-content ul li:nth-child(4):hover {
+.home .home-content ul li:nth-child(4):hover {
   background-color: red;
 }
 
-#home .home-content ul li:nth-child(5):hover {
+.home .home-content ul li:nth-child(5):hover {
   background-color: rgb(3, 138, 191);
 }
 
-#home .home-content ul li:nth-child(6):hover {
+.home .home-content ul li:nth-child(6):hover {
   background-color: black;
 }
 
-#home .home-logo {
+.home .home-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,122 +423,122 @@ header nav ul li a:hover {
   }
 }
 
-#home .home-logo img {
+.home .home-logo img {
   width: 40rem;
 }
 
 @media only screen and (max-width: 900px) {
-  #home {
+  .home {
     flex-direction: column;
     padding-top: 10rem;
   }
-  #home .home-content {
+  .home .home-content {
     width: 100%;
   }
-  #home .home-logo {
+  .home .home-logo {
     margin: 8rem 0;
     width: 500px;
   }
-  #home .home-logo img {
+  .home .home-logo img {
     width: 100%;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  #home .home-logo {
+  .home .home-logo {
     width: 400px;
-    margin-bottom: 4rem;
   }
 }
 
 /* About Section */
 
-#about {
+.about {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  margin-top: 4rem;
 }
 
-#about .about-container {
+.about .about-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 7rem;
 }
 
-#about .about-container .about-content {
+.about .about-container .about-content {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-#about .about-container .about-content .data {
+.about .about-container .about-content .data {
   text-align: justify;
   margin: 2rem 0;
 }
 
-#about .about-container .about-content span {
+.about .about-container .about-content span {
   color: var(--fourth);
 }
 
-#about .about-container .about-content span small {
+.about .about-container .about-content span small {
   color: var(--sixth);
 }
 
-#about .about-logo {
+.about .about-logo {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
 }
 
-#about .about-logo img {
+.about .about-logo img {
   width: 40rem;
 }
 
-#about .resumeBtn {
+.about .resumeBtn {
   margin-top: 2rem;
 }
 
 @media only screen and (max-width: 900px) {
-  #about {
+  .about {
     margin-top: 2rem;
   }
-  #about .about-container {
+  .about .about-container {
     flex-direction: column;
   }
-  #about .about-container .about-content {
+  .about .about-container .about-content {
     width: 100%;
     margin-top: -8rem;
   }
-  #about .about-container .about-logo {
+  .about .about-container .about-logo {
     width: 650px;
     margin: 2rem 0 5rem 0;
   }
-  #about .about-container .about-logo img {
+  .about .about-container .about-logo img {
     width: 70%;
   }
 }
 
 @media only screen and (max-width: 700px) {
-  #about .about-container .about-logo {
+  .about .about-container .about-logo {
     margin-top: 1rem;
     width: 100%;
   }
-  #about .about-container .about-content {
+  .about .about-container .about-content {
     width: 100%;
   }
-  #about .about-container .about-logo img {
+  .about .about-container .about-logo img {
     width: 70%;
   }
 }
 
 /* Education Section */
 
-#education {
+.education {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -549,7 +546,7 @@ header nav ul li a:hover {
   min-height: 100vh;
 }
 
-#education .education-container {
+.education .education-container {
   min-width: 80rem;
   display: flex;
   flex-direction: column;
@@ -557,13 +554,13 @@ header nav ul li a:hover {
   justify-content: center;
 }
 
-#education .education-container .education-box {
+.education .education-container .education-box {
   width: 40rem;
   padding: 2rem 5rem;
   position: relative;
 }
 
-#education .education-container .education-box::after {
+.education .education-container .education-box::after {
   content: "";
   position: absolute;
   width: 0.4rem;
@@ -574,24 +571,24 @@ header nav ul li a:hover {
   z-index: -6;
 }
 
-#education .education-container .education-box:nth-child(2)::after {
+.education .education-container .education-box:nth-child(2)::after {
   left: -0.2rem;
 }
 
-#education .education-container .education-box:nth-child(1) {
+.education .education-container .education-box:nth-child(1) {
   align-self: flex-start;
 }
 
-#education .education-container .education-box:nth-child(2) {
+.education .education-container .education-box:nth-child(2) {
   align-self: flex-end;
   margin-left: -2rem;
 }
 
-#education .education-container .education-box:nth-child(3) {
+.education .education-container .education-box:nth-child(3) {
   align-self: flex-start;
 }
 
-#education .education-container .education-box i {
+.education .education-container .education-box i {
   position: absolute;
   top: 15%;
   right: -6.5%;
@@ -605,18 +602,18 @@ header nav ul li a:hover {
   line-height: 4rem;
 }
 
-#education .education-container .education-box:nth-child(2) i {
+.education .education-container .education-box:nth-child(2) i {
   left: -6.5%;
 }
 
-#education .education-container .education-box .box {
+.education .education-container .education-box .box {
   border: 0.4rem solid var(--fourth);
   padding: 0 1rem;
   border-radius: 1rem;
   position: relative;
 }
 
-#education .education-container .education-box .box .arrow {
+.education .education-container .education-box .box .arrow {
   position: absolute;
   content: "";
   width: 3rem;
@@ -628,42 +625,42 @@ header nav ul li a:hover {
   transform: rotate(90deg);
 }
 
-#education .education-container .education-box:nth-child(2) .box .arrow {
+.education .education-container .education-box:nth-child(2) .box .arrow {
   left: -9%;
   transform: rotate(270deg);
 }
 
 @media only screen and (max-width: 700px) {
-  #education .education-container {
+  .education .education-container {
     padding-right: 5rem;
   }
-  #education .education-container .education-box:nth-child(1) {
+  .education .education-container .education-box:nth-child(1) {
     align-self: center;
   }
 
-  #education .education-container .education-box:nth-child(2) {
+  .education .education-container .education-box:nth-child(2) {
     align-self: center;
     margin-left: 0;
   }
 
-  #education .education-container .education-box:nth-child(3) {
+  .education .education-container .education-box:nth-child(3) {
     align-self: center;
   }
-  #education .education-container .education-box:nth-child(2)::after {
+  .education .education-container .education-box:nth-child(2)::after {
     left: 99.5%;
   }
-  #education .education-container .education-box:nth-child(2) .box .arrow {
+  .education .education-container .education-box:nth-child(2) .box .arrow {
     left: 99%;
     transform: rotate(90deg);
   }
-  #education .education-container .education-box:nth-child(2) i {
+  .education .education-container .education-box:nth-child(2) i {
     left: 93.5%;
   }
 }
 
 /* Skills Section */
 
-#skills {
+.skills {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -672,7 +669,7 @@ header nav ul li a:hover {
   scroll-margin: 3rem;
 }
 
-#skills .skills-container {
+.skills .skills-container {
   max-width: 100rem;
   display: flex;
   justify-content: center;
@@ -682,7 +679,7 @@ header nav ul li a:hover {
   padding: 1rem;
 }
 
-#skills .skills-container .skill {
+.skills .skills-container .skill {
   width: 15rem;
   height: 15rem;
   display: flex;
@@ -694,8 +691,8 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-#skills .skills-container .skill::before,
-#skills .skills-container .skill::after {
+.skills .skills-container .skill::before,
+.skills .skills-container .skill::after {
   content: "";
   position: absolute;
   width: 12rem;
@@ -707,31 +704,37 @@ header nav ul li a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-#skills .skills-container .skill:hover:after {
+.skills .skills-container .skill:hover:after {
   background-color: var(--second);
   transform: rotate(90deg);
   z-index: -99;
 }
 
-#skills .skills-container .skill img {
+.skills .skills-container .skill img {
   width: 5rem;
 }
 
-#skills .skills-container .skill p {
+.skills .skills-container .skill p {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
 }
 
 @media only screen and (max-width: 700px) {
-  #skills {
+  .skills {
     scroll-margin: 7rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .skills {
+    scroll-margin: 8rem;
   }
 }
 
 /* Experience Section */
 
-#experience {
+.experience {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -739,7 +742,7 @@ header nav ul li a:hover {
   min-height: 100vh;
 }
 
-#experience .experience-container {
+.experience .experience-container {
   max-width: 120rem;
   display: flex;
   justify-content: center;
@@ -750,7 +753,7 @@ header nav ul li a:hover {
   transition: 0.3s;
 }
 
-#experience .experience-container .experience-box {
+.experience .experience-container .experience-box {
   display: flex;
   gap: 1rem;
   border: 0.4rem solid var(--fourth);
@@ -762,24 +765,24 @@ header nav ul li a:hover {
   box-shadow: -1rem 1rem var(--sixth);
 }
 
-#experience .experience-container .experience-box:hover {
+.experience .experience-container .experience-box:hover {
   transform: translateX(0) translateY(0);
   box-shadow: 0rem 0rem transparent;
 }
 
-#experience .experience-container .experience-box .image {
+.experience .experience-container .experience-box .image {
   max-width: 15rem;
   max-height: 15rem;
   overflow: hidden;
 }
 
-#experience .experience-container .experience-box .image img {
+.experience .experience-container .experience-box .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#experience .experience-container .experience-box .box-content {
+.experience .experience-container .experience-box .box-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -788,7 +791,7 @@ header nav ul li a:hover {
 
 /* Projects */
 
-#projects {
+.projects {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -796,7 +799,7 @@ header nav ul li a:hover {
   min-height: 100vh;
 }
 
-#projects .projects-container {
+.projects .projects-container {
   max-width: 120rem;
   display: flex;
   justify-content: center;
@@ -806,7 +809,7 @@ header nav ul li a:hover {
   padding: 1rem;
 }
 
-#projects .menu {
+.projects .menu {
   display: flex;
   margin-bottom: 2rem;
   flex-wrap: wrap;
@@ -814,19 +817,19 @@ header nav ul li a:hover {
   align-items: center;
 }
 
-#projects .menu button {
+.projects .menu button {
   margin: 1rem 1rem;
   color: var(--fourth);
   background-color: var(--first);
 }
 
-#projects .menu button:hover,
-#projects .menu .activeProject {
+.projects .menu button:hover,
+.projects .menu .activeProject {
   color: var(--first);
   background-color: var(--fourth);
 }
 
-#projects .projects-container .project-box {
+.projects .projects-container .project-box {
   display: flex;
   flex-direction: column;
   width: 30rem;
@@ -841,19 +844,19 @@ header nav ul li a:hover {
   /* transition: all 1s ease-in-out, display 1s ease-in-out 10s; */
 }
 
-#projects .projects-container .project-box:hover img {
+.projects .projects-container .project-box:hover img {
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 
-/* #projects .projects-container .border-box {
+/* .projects .projects-container .border-box {
   border: 5px dotted var(--sixth);
   border-radius: 0 0 5px 5px;
   padding: 3px;
   transition: all 0.3s ease-in-out, display 1s ease-in-out 10s;
 } */
 
-#projects .projects-container .project-box h3 {
+.projects .projects-container .project-box h3 {
   position: relative;
   top: 0;
   left: -0.2rem;
@@ -867,25 +870,25 @@ header nav ul li a:hover {
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
-#projects .projects-container .project-box .image-box {
+.projects .projects-container .project-box .image-box {
   width: 100%;
   height: 20rem;
   overflow: hidden;
 }
 
-#projects .projects-container .project-box .image-box img {
+.projects .projects-container .project-box .image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
 
-#projects .projects-container .project-box .box-content {
+.projects .projects-container .project-box .box-content {
   padding: 0.5rem 1rem;
   background-color: var(--first);
 }
 
-#projects .projects-container .project-box .buttons {
+.projects .projects-container .project-box .buttons {
   position: absolute;
   width: 100%;
   height: 13.5rem;
@@ -901,25 +904,25 @@ header nav ul li a:hover {
   transition: 0.3s;
 }
 
-#projects .projects-container .project-box .buttons button {
+.projects .projects-container .project-box .buttons button {
   width: 90%;
   align-self: center;
   color: var(--first);
 }
 
-#projects .projects-container .project-box .buttons button:hover {
+.projects .projects-container .project-box .buttons button:hover {
   border: 0.2rem solid white;
 }
 
-#projects .projects-container .project-box .buttons button:hover a {
+.projects .projects-container .project-box .buttons button:hover a {
   color: var(--first);
 }
 
-#projects .projects-container .project-box .buttons button a i {
+.projects .projects-container .project-box .buttons button a i {
   animation: none;
 }
 
-#projects .projects-container .project-box:hover .buttons {
+.projects .projects-container .project-box:hover .buttons {
   bottom: -1rem;
 }
 
@@ -937,7 +940,7 @@ header nav ul li a:hover {
 
 /* Contact Us */
 
-#contact {
+.contact {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -945,13 +948,13 @@ header nav ul li a:hover {
   flex-direction: column;
 }
 
-#contact .content {
+.contact .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#contact .content .left-side {
+.contact .content .left-side {
   width: 25%;
   height: 100%;
   display: flex;
@@ -989,7 +992,7 @@ header nav ul li a:hover {
   font-size: 1.4rem;
   color: gray;
 }
-#contact .content .right-side {
+.contact .content .right-side {
   width: 75%;
   margin-left: 7.5rem;
 }
@@ -1045,24 +1048,24 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 90rem) {
-  #contact {
+  .contact {
     width: 100%;
     margin-top: 5rem;
   }
-  #contact .content {
+  .contact .content {
     flex-direction: column-reverse;
   }
-  #contact .content .left-side {
+  .contact .content .left-side {
     width: 100%;
     flex-direction: row;
     margin-top: 4rem;
     justify-content: center;
     flex-wrap: wrap;
   }
-  #contact .content .left-side::before {
+  .contact .content .left-side::before {
     display: none;
   }
-  #contact .content .right-side {
+  .contact .content .right-side {
     width: 100%;
     margin-left: 0;
   }
@@ -1070,24 +1073,24 @@ header nav ul li a:hover {
 
 /* Footer */
 
-.footer {
+#footer {
   background-color: var(--sixth);
   color: var(--first);
 }
 
-#footer {
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#footer h2 {
+.footer h2 {
   font-size: 1.8rem;
   padding: 1.5rem 0;
   font-weight: 500;
 }
 
-#footer h2 i {
+.footer h2 i {
   margin: 0 1rem;
   color: red;
 }
