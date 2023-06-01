@@ -10,7 +10,7 @@ aEls.forEach((aEl)=>{
 
 
 // Hamburger 
-const menuEl = document.querySelector("#menu");
+const menuEl = document.querySelector("#hamburger");
 const navEL = document.querySelector("header nav")
 
 menuEl.addEventListener("click",()=>{

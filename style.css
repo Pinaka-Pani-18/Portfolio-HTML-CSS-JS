@@ -185,6 +185,10 @@ header nav ul {
   display: flex;
 }
 
+header nav ul li {
+  cursor: pointer;
+}
+
 header nav ul li a {
   font-size: 1.5rem;
   display: inline-block;
@@ -198,17 +202,17 @@ header nav ul li a {
   position: relative;
 }
 
-header nav ul li a:hover,
-header nav ul li a.active {
+header nav ul li:hover a {
+  transform: translateY(-6px);
+}
+
+header nav ul li a.active,
+header nav ul li:hover a {
   color: var(--fourth);
   border-bottom: 0.3rem solid var(--fourth);
 }
 
-header nav ul li a:hover {
-  margin-top: -0.5rem;
-}
-
-#menu {
+#hamburger {
   display: none;
   font-size: 2.4rem;
   cursor: pointer;
@@ -228,7 +232,7 @@ header nav ul li a:hover {
 }
 
 @media only screen and (max-width: 900px) {
-  #menu {
+  #hamburger {
     display: block;
   }
 
@@ -264,11 +268,9 @@ header nav ul li a:hover {
   header nav ul {
     display: block;
   }
+
   header nav ul li a {
-    margin: 0.5rem 0;
-  }
-  header nav ul li a:hover {
-    margin-top: 0.5rem;
+    margin: 0.7rem 0;
   }
 }
 
