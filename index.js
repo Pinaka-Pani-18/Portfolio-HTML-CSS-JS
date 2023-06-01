@@ -21,7 +21,7 @@ menuEl.addEventListener("click",()=>{
 
 // Text Typing
 var typed = new Typed('.text-type', {
-    strings: ["Web Developer", "Programmer", "Open Source Contributor", "Youtuber"],
+    strings: ["Web Developer", "Programmer", "Open Source Contributor", "Blogger", "Youtuber"],
     typeSpeed: 100,
     // backSpeed: 150,
     loop: true,

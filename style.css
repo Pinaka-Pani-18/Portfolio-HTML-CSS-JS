@@ -305,12 +305,19 @@ header nav ul li:hover a {
   color: var(--sixth);
 }
 
+.home .home-content h2 .wave i {
+  transform: rotate(-45deg) rotateY(180deg);
+  color: var(--fourth);
+  font-size: 4.5rem;
+  margin-left: 0.5rem;
+}
+
 .home .home-content h2 .wave {
   animation-name: wave-animation;
   animation-duration: 2s;
-  animation-iteration-count: infinite; /* Never stop waving :) */
+  animation-iteration-count: infinite;
   display: inline-block;
-  transform-origin: 80% 80%;
+  transform-origin: 85% 85%;
 }
 
 @keyframes wave-animation {
