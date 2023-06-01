@@ -163,3 +163,21 @@ document.querySelector(".activeProject").classList.remove("activeProject");
 //         e = false;
 //     }
 // }
+
+
+// Scroll to Top
+const scrollToTopEl = document.querySelector(".scrollToTop");
+
+function goToTop(){
+    window.scrollTo(0,0);
+}
+
+window.onscroll = () =>{
+    if (window.scrollY > 100) {
+        scrollToTopEl.classList.add('activeScrollToTop');
+    } else {
+       scrollToTopEl.classList.remove('activeScrollToTop');
+    }
+}
+
+scrollToTopEl.addEventListener("click",goToTop);
