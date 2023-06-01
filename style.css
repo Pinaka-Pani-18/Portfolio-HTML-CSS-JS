@@ -27,16 +27,6 @@ html {
   overflow-x: hidden;
 }
 
-html::-webkit-scrollbar {
-  width: 0.8rem;
-}
-html::-webkit-scrollbar-track {
-  background: rgb(235, 202, 245);
-}
-html::-webkit-scrollbar-thumb {
-  background: #420177;
-}
-
 @media only screen and (max-width: 900px) {
   * {
     scroll-margin: 6rem;
@@ -176,7 +166,7 @@ header {
 }
 
 header .logo {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--sixth);
   font-weight: 600;
   transition: all 0.3s ease-in-out;
@@ -187,8 +177,8 @@ header .logo:hover {
 }
 
 header .logo i {
-  font-size: 1.6rem;
-  margin-right: 0.3rem;
+  font-size: 2rem;
+  margin-right: 0.4rem;
 }
 
 header .logo span {
@@ -208,7 +198,7 @@ header nav ul li a {
   display: inline-block;
   color: var(--sixth);
   padding: 0.5rem 0;
-  margin: 0 1rem;
+  margin: 0 0.8rem;
   font-weight: 500;
   border: 0.3rem solid transparent;
   text-transform: uppercase;
@@ -217,7 +207,7 @@ header nav ul li a {
 }
 
 header nav ul li:hover a {
-  transform: translateY(-6px);
+  transform: translateY(-0.6rem);
 }
 
 header nav ul li a.active,
@@ -460,7 +450,7 @@ header nav ul li:hover a {
   }
   .home .home-logo {
     margin: 8rem 0;
-    width: 500px;
+    width: 50rem;
   }
   .home .home-logo img {
     width: 100%;
@@ -469,7 +459,7 @@ header nav ul li:hover a {
 
 @media only screen and (max-width: 700px) {
   .home .home-logo {
-    width: 400px;
+    width: 40rem;
   }
 }
 
@@ -542,7 +532,7 @@ header nav ul li:hover a {
     margin-top: -8rem;
   }
   .about .about-container .about-logo {
-    width: 650px;
+    width: 65rem;
     margin: 2rem 0 5rem 0;
   }
   .about .about-container .about-logo img {
@@ -749,8 +739,8 @@ header nav ul li:hover a {
   font-weight: 500;
   background-color: var(--first);
   color: var(--fourth);
-  padding: 2px 6px;
-  border-radius: 50px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5rem;
 }
 
 @media only screen and (max-width: 700px) {
@@ -1032,7 +1022,7 @@ header nav ul li:hover a {
 .content .right-side .topic-text {
   font-size: 2.3rem;
   font-weight: 600;
-  color: var(--carmine-pink);
+  color: var(--fourth);
 }
 .right-side .input-box {
   height: 5rem;
@@ -1047,6 +1037,11 @@ header nav ul li:hover a {
   transform: translate(-50%, -50%);
 }
 
+.right-side .input-box input:focus ~ i,
+.right-side .input-box textarea:focus ~ i {
+  color: var(--fourth);
+}
+
 .right-side .input-box .fa-message {
   top: 2rem;
 }
@@ -1058,10 +1053,16 @@ header nav ul li:hover a {
   border: none;
   outline: none;
   font-size: 1.6rem;
-  background: #f0f1f8;
+  background: var(--first);
+  border: 0.2rem solid gray;
   border-radius: 0.6rem;
   padding: 0 4.5rem;
   resize: none;
+}
+
+.right-side .input-box input:focus,
+.right-side .input-box textarea:focus {
+  border-color: var(--fourth);
 }
 
 .right-side .message-box {
@@ -1075,7 +1076,7 @@ header nav ul li:hover a {
 }
 
 .LetsTalkBtn i {
-  margin-left: 5px;
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 900px) {
