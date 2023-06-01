@@ -708,8 +708,8 @@ header nav ul li:hover a {
 .skills .skills-container .skill::after {
   content: "";
   position: absolute;
-  width: 12rem;
-  height: 12rem;
+  width: 13rem;
+  height: 13rem;
   background-color: var(--sixth);
   z-index: -6;
   border-radius: 2rem;
@@ -725,12 +725,18 @@ header nav ul li:hover a {
 
 .skills .skills-container .skill img {
   width: 5rem;
+  margin-top: -1rem;
 }
 
 .skills .skills-container .skill p {
   font-size: 1.2rem;
+  margin-top: 0.5rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
+  background-color: var(--first);
+  color: var(--fourth);
+  padding: 2px 6px;
+  border-radius: 50px;
 }
 
 @media only screen and (max-width: 700px) {
