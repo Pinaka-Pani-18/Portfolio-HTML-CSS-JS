@@ -27,12 +27,23 @@ html {
   overflow-x: hidden;
 }
 
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+html::-webkit-scrollbar-track {
+  background: rgb(235, 202, 245);
+}
+html::-webkit-scrollbar-thumb {
+  background: #420177;
+}
+
 @media only screen and (max-width: 900px) {
-  html {
-    font-size: 56%;
-  }
   * {
     scroll-margin: 6rem;
+  }
+  html {
+    font-size: 56%;
+    overflow-x: hidden;
   }
 }
 
@@ -42,6 +53,7 @@ html {
   }
   html {
     font-size: 50%;
+    overflow-x: hidden;
   }
 }
 
@@ -54,6 +66,7 @@ body {
   background-color: var(--first);
   color: var(--sixth);
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 button {
@@ -157,6 +170,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 100;
   box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.2);
 }
@@ -214,7 +228,7 @@ header nav ul li:hover a {
 
 #hamburger {
   display: none;
-  font-size: 2.4rem;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -237,7 +251,7 @@ header nav ul li:hover a {
   }
 
   header nav {
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 6rem;
     width: 60%;
