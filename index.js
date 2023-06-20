@@ -1,36 +1,39 @@
-// Navbar active button 
+// Navbar active button
 const aEls = document.querySelectorAll("nav ul li a");
 
-aEls.forEach((aEl)=>{
-    aEl.addEventListener("click",()=>{
-        document.querySelector(".active").classList.remove("active");
-        aEl.classList.add("active");
-    })
-})
-
-
-// Hamburger 
-const menuEl = document.querySelector("#hamburger");
-const navEL = document.querySelector("header nav")
-
-menuEl.addEventListener("click",()=>{
-    menuEl.classList.toggle('fa-times');
-    navEL.classList.toggle('checked');
+aEls.forEach((aEl) => {
+  aEl.addEventListener("click", () => {
+    document.querySelector(".active").classList.remove("active");
+    aEl.classList.add("active");
+  });
 });
 
+// Hamburger
+const menuEl = document.querySelector("#hamburger");
+const navEL = document.querySelector("header nav");
+
+menuEl.addEventListener("click", () => {
+  menuEl.classList.toggle("fa-times");
+  navEL.classList.toggle("checked");
+});
 
 // Text Typing
-var typed = new Typed('.text-type', {
-    strings: ["Web Developer", "Programmer", "Open Source Contributor", "Blogger", "Youtuber"],
-    typeSpeed: 100,
-    // backSpeed: 150,
-    loop: true,
-  });
-
+var typed = new Typed(".text-type", {
+  strings: [
+    "Web Developer",
+    "Programmer",
+    "Open Source Contributor",
+    "Blogger",
+    "Youtuber",
+  ],
+  typeSpeed: 100,
+  // backSpeed: 150,
+  loop: true,
+});
 
 //   Projects filtering
-const btnEls =document.querySelectorAll("#projects .menu .btn");
-const projectBoxEls =document.querySelectorAll(".project-box");
+const btnEls = document.querySelectorAll("#projects .menu .btn");
+const projectBoxEls = document.querySelectorAll(".project-box");
 
 // for(let i=1; i<btnEls.length; i++){
 //     btnEls[i].addEventListener("click",filterableFun);
@@ -72,38 +75,36 @@ const projectBoxEls =document.querySelectorAll(".project-box");
 //     })
 // })
 
-btnEls.forEach((btn)=>{
-    btn.addEventListener("click",(e)=>{
+btnEls.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    document.querySelector(".activeProject").classList.remove("activeProject");
+    btn.classList.add("activeProject");
 
-document.querySelector(".activeProject").classList.remove("activeProject");
-        btn.classList.add("activeProject");
+    const name = e.target.dataset.name;
+    console.log(name);
 
-        const name = e.target.dataset.name;
-        
-        projectBoxEls.forEach((itemEl)=>{
-            // itemEl.classList.remove("projects-shrink");
-            // itemEl.classList.add("projects-expand");
-            if(name==="all"){
-                itemEl.style.display = "block"
-            }else{
-                if(itemEl.classList.contains(name)){
-                    itemEl.style.display = "block"
-                    // itemEl.classList.add("projects-expand");
-                    // itemEl.classList.remove("projects-shrink");
+    projectBoxEls.forEach((itemEl) => {
+      // itemEl.classList.remove("projects-shrink");
+      // itemEl.classList.add("projects-expand");
+      if (name === "all") {
+        itemEl.style.display = "block";
+      } else {
+        if (itemEl.classList.contains(name)) {
+          console.log("came");
+          itemEl.style.display = "block";
+          // itemEl.classList.add("projects-expand");
+          // itemEl.classList.remove("projects-shrink");
+        } else {
+          itemEl.style.display = "none";
+          // itemEl.classList.remove("projects-expand");
+          // itemEl.classList.add("projects-shrink");
+        }
+      }
+    });
+  });
+});
 
-                }else{
-                    itemEl.style.display = "none";
-                    // itemEl.classList.remove("projects-expand");
-                    // itemEl.classList.add("projects-shrink");
-
-                }
-            }
-        })
-    })
-})
-
-
-// Disabling Inspect Element 
+// Disabling Inspect Element
 // document.onkeydown = function(e) {
 //     if(event.keyCode == 123) {
 //     return false;
@@ -121,7 +122,6 @@ document.querySelector(".activeProject").classList.remove("activeProject");
 //     return false;
 //     }
 //     }
-
 
 // Scroll Spy
 // var section = document.querySelectorAll("section");
@@ -149,10 +149,9 @@ document.querySelector(".activeProject").classList.remove("activeProject");
 //     }
 // };
 
-
 // reload
 // window.onresize =()=>{
-//     x = window.innerWidth; 
+//     x = window.innerWidth;
 //     y= window.innerHeight;
 //     e = false;
 //     if( x>850 && x<900 || x>650 && x<700 ){
@@ -164,67 +163,69 @@ document.querySelector(".activeProject").classList.remove("activeProject");
 //     }
 // }
 
-
 // Scroll to Top
 const scrollToTopEl = document.querySelector(".scrollToTop");
 
-function goToTop(){
-    window.scrollTo(0,0);
+function goToTop() {
+  window.scrollTo(0, 0);
 }
 
-window.onscroll = () =>{
-    if (window.scrollY > 100) {
-        scrollToTopEl.classList.add('activeScrollToTop');
-    } else {
-       scrollToTopEl.classList.remove('activeScrollToTop');
-    }
-}
+window.onscroll = () => {
+  if (window.scrollY > 100) {
+    scrollToTopEl.classList.add("activeScrollToTop");
+  } else {
+    scrollToTopEl.classList.remove("activeScrollToTop");
+  }
+};
 
-scrollToTopEl.addEventListener("click",goToTop);
-
+scrollToTopEl.addEventListener("click", goToTop);
 
 // Scroll Reveal Animation
 const scrollRev = ScrollReveal({
-    origin: 'top',
-    distance: '100px',
-    duration: 600,
-    reset: true
+  origin: "top",
+  distance: "100px",
+  duration: 600,
+  reset: true,
 });
 
-scrollRev.reveal('.home h2', { delay: 300 });
-scrollRev.reveal('.home p', { delay: 300 });
-scrollRev.reveal('.home .home-logo img', { delay: 600 });
-scrollRev.reveal('.home .fa-instagram', { delay: 600 });
-scrollRev.reveal('.home .fa-blogger', { delay: 700 });
-scrollRev.reveal('.home .fa-linkedin', { delay: 800 });
-scrollRev.reveal('.home .fa-youtube', { delay: 900 });
-scrollRev.reveal('.home .fa-telegram', { delay: 1000 });
-scrollRev.reveal('.home .fa-github', { delay: 1200 });
-scrollRev.reveal('.home button', { delay: 1200 });
+scrollRev.reveal(".home h2", { delay: 300 });
+scrollRev.reveal(".home p", { delay: 300 });
+scrollRev.reveal(".home .home-logo img", { delay: 600 });
+scrollRev.reveal(".home .fa-instagram", { delay: 600 });
+scrollRev.reveal(".home .fa-blogger", { delay: 700 });
+scrollRev.reveal(".home .fa-linkedin", { delay: 800 });
+scrollRev.reveal(".home .fa-youtube", { delay: 900 });
+scrollRev.reveal(".home .fa-telegram", { delay: 1000 });
+scrollRev.reveal(".home .fa-github", { delay: 1200 });
+scrollRev.reveal(".home button", { delay: 1200 });
 
-scrollRev.reveal('.about h1', { delay: 200 });
-scrollRev.reveal('.about .about-logo', { delay: 400 });
-scrollRev.reveal('.about .about-content h2', { delay: 500 });
-scrollRev.reveal('.about .about-content h4', { delay: 600 });
-scrollRev.reveal('.about .about-content p', { delay: 700 });
-scrollRev.reveal('.about .about-content span', { delay: 800 });
-scrollRev.reveal('.about .about-content button', { delay: 900 });
+scrollRev.reveal(".about h1", { delay: 200 });
+scrollRev.reveal(".about .about-logo", { delay: 400 });
+scrollRev.reveal(".about .about-content h2", { delay: 500 });
+scrollRev.reveal(".about .about-content h4", { delay: 600 });
+scrollRev.reveal(".about .about-content p", { delay: 700 });
+scrollRev.reveal(".about .about-content span", { delay: 800 });
+scrollRev.reveal(".about .about-content button", { delay: 900 });
 
-scrollRev.reveal('.education h1', { delay: 200 });
-scrollRev.reveal('.education .box', { interval: 400 });
+scrollRev.reveal(".education h1", { delay: 200 });
+scrollRev.reveal(".education .box", { interval: 400 });
 
-scrollRev.reveal('.skills h1', { delay: 200 });
-scrollRev.reveal('.skills .skills-container .skill', { interval: 200 });
+scrollRev.reveal(".skills h1", { delay: 200 });
+scrollRev.reveal(".skills .skills-container .skill", { interval: 200 });
 
-scrollRev.reveal('.experience h1', { delay: 200 });
-scrollRev.reveal('.experience .experience-container .experience-box',{interval: 300});
+scrollRev.reveal(".experience h1", { delay: 200 });
+scrollRev.reveal(".experience .experience-container .experience-box", {
+  interval: 300,
+});
 
-scrollRev.reveal('.projects h1', { delay: 200 });
-scrollRev.reveal('.projects .menu button', { interval: 200 });
-scrollRev.reveal('.projects .projects-container .project-box', { interval: 300 });
+scrollRev.reveal(".projects h1", { delay: 200 });
+scrollRev.reveal(".projects .menu button", { interval: 200 });
+scrollRev.reveal(".projects .projects-container .project-box", {
+  interval: 300,
+});
 
-scrollRev.reveal('.contact h1', { delay: 200 });
-scrollRev.reveal('.contact .left-side div', { interval: 100 });
-scrollRev.reveal('.contact .right-side .topic-text', { delay: 200 });
-scrollRev.reveal('.contact .right-side p', { delay: 200 });
-scrollRev.reveal('.contact .right-side form div', { interval: 300 });
+scrollRev.reveal(".contact h1", { delay: 200 });
+scrollRev.reveal(".contact .left-side div", { interval: 100 });
+scrollRev.reveal(".contact .right-side .topic-text", { delay: 200 });
+scrollRev.reveal(".contact .right-side p", { delay: 200 });
+scrollRev.reveal(".contact .right-side form div", { interval: 300 });
