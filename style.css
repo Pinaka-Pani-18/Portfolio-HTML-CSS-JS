@@ -938,7 +938,18 @@ header nav ul li:hover a {
   .box-content
   .buttons
   button {
-  padding: 1rem 9rem;
+  padding: 0;
+}
+
+.projects-wrapper
+  .projects-container
+  .project-box
+  .box-content
+  .buttons
+  button
+  a {
+  line-height: 45px;
+  padding: 1.3rem 9rem;
 }
 
 .projects-wrapper

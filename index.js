@@ -188,44 +188,44 @@ const scrollRev = ScrollReveal({
   reset: true,
 });
 
-scrollRev.reveal(".home h2", { delay: 300 });
-scrollRev.reveal(".home p", { delay: 300 });
-scrollRev.reveal(".home .home-logo img", { delay: 600 });
-scrollRev.reveal(".home .fa-instagram", { delay: 600 });
-scrollRev.reveal(".home .fa-blogger", { delay: 700 });
-scrollRev.reveal(".home .fa-linkedin", { delay: 800 });
-scrollRev.reveal(".home .fa-youtube", { delay: 900 });
-scrollRev.reveal(".home .fa-telegram", { delay: 1000 });
-scrollRev.reveal(".home .fa-github", { delay: 1200 });
-scrollRev.reveal(".home button", { delay: 1200 });
+scrollRev.reveal(".home-wrapper h2", { delay: 300 });
+scrollRev.reveal(".home-wrapper p", { delay: 300 });
+scrollRev.reveal(".home-wrapper .home-logo img", { delay: 600 });
+scrollRev.reveal(".home-wrapper .fa-instagram", { delay: 600 });
+scrollRev.reveal(".home-wrapper .fa-blogger", { delay: 700 });
+scrollRev.reveal(".home-wrapper .fa-linkedin", { delay: 800 });
+scrollRev.reveal(".home-wrapper .fa-youtube", { delay: 900 });
+scrollRev.reveal(".home-wrapper .fa-telegram", { delay: 1000 });
+scrollRev.reveal(".home-wrapper .fa-github", { delay: 1200 });
+scrollRev.reveal(".home-wrapper button", { delay: 1200 });
 
-scrollRev.reveal(".about h1", { delay: 200 });
-scrollRev.reveal(".about .about-logo", { delay: 400 });
-scrollRev.reveal(".about .about-content h2", { delay: 500 });
-scrollRev.reveal(".about .about-content h4", { delay: 600 });
-scrollRev.reveal(".about .about-content p", { delay: 700 });
-scrollRev.reveal(".about .about-content span", { delay: 800 });
-scrollRev.reveal(".about .about-content button", { delay: 900 });
+scrollRev.reveal(".about-wrapper h1", { delay: 200 });
+scrollRev.reveal(".about-wrapper .about-logo", { delay: 400 });
+scrollRev.reveal(".about-wrapper .about-content h2", { delay: 500 });
+scrollRev.reveal(".about-wrapper .about-content h4", { delay: 600 });
+scrollRev.reveal(".about-wrapper .about-content p", { delay: 700 });
+scrollRev.reveal(".about-wrapper .about-content span", { delay: 800 });
+scrollRev.reveal(".about-wrapper .about-content button", { delay: 900 });
 
-scrollRev.reveal(".education h1", { delay: 200 });
-scrollRev.reveal(".education .box", { interval: 400 });
+scrollRev.reveal(".education-wrapper h1", { delay: 200 });
+scrollRev.reveal(".education-wrapper .box", { interval: 400 });
 
-scrollRev.reveal(".skills h1", { delay: 200 });
-scrollRev.reveal(".skills .skills-container .skill", { interval: 200 });
+scrollRev.reveal(".skills-wrapper h1", { delay: 200 });
+scrollRev.reveal(".skills-wrapper .skills-container .skill", { interval: 200 });
 
-scrollRev.reveal(".experience h1", { delay: 200 });
-scrollRev.reveal(".experience .experience-container .experience-box", {
+scrollRev.reveal(".experience-wrapper h1", { delay: 200 });
+scrollRev.reveal(".experience-wrapper .experience-container .experience-box", {
   interval: 300,
 });
 
-scrollRev.reveal(".projects h1", { delay: 200 });
-scrollRev.reveal(".projects .menu button", { interval: 200 });
-scrollRev.reveal(".projects .projects-container .project-box", {
+scrollRev.reveal(".projects-wrapper h1", { delay: 200 });
+scrollRev.reveal(".projects-wrapper .menu button", { interval: 200 });
+scrollRev.reveal(".projects-wrapper .projects-container .project-box", {
   interval: 300,
 });
 
-scrollRev.reveal(".contact h1", { delay: 200 });
-scrollRev.reveal(".contact .left-side div", { interval: 100 });
-scrollRev.reveal(".contact .right-side .topic-text", { delay: 200 });
-scrollRev.reveal(".contact .right-side p", { delay: 200 });
-scrollRev.reveal(".contact .right-side form div", { interval: 300 });
+// scrollRev.reveal(".contact-wrapper h1", { delay: 200 });
+// scrollRev.reveal(".contact-wrapper .left-side div", { interval: 100 });
+// scrollRev.reveal(".contact-wrapper .right-side .topic-text", { delay: 200 });
+// scrollRev.reveal(".contact-wrapper .right-side p", { delay: 200 });
+// scrollRev.reveal(".contact-wrapper .right-side form div", { interval: 300 });
