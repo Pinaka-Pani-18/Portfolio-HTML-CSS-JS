@@ -909,7 +909,7 @@ header nav ul li:hover a {
 .projects-wrapper .projects-container .project-box .box-content .title {
   background-color: var(--sixth);
   color: white;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   margin-bottom: 0.5rem;
   border-radius: 5rem;
   font-weight: 600;
@@ -938,7 +938,8 @@ header nav ul li:hover a {
   .box-content
   .buttons
   button {
-  padding: 0;
+  color: var(--first);
+  padding: 1rem 9rem;
 }
 
 .projects-wrapper
@@ -946,10 +947,8 @@ header nav ul li:hover a {
   .project-box
   .box-content
   .buttons
-  button
-  a {
-  line-height: 45px;
-  padding: 1.3rem 9rem;
+  button:hover {
+  color: var(--fourth);
 }
 
 .projects-wrapper

@@ -221,7 +221,7 @@ scrollRev.reveal(".experience-wrapper .experience-container .experience-box", {
 scrollRev.reveal(".projects-wrapper h1", { delay: 200 });
 scrollRev.reveal(".projects-wrapper .menu button", { interval: 200 });
 scrollRev.reveal(".projects-wrapper .projects-container .project-box", {
-  interval: 300,
+  interval: 150,
 });
 
 // scrollRev.reveal(".contact-wrapper h1", { delay: 200 });
