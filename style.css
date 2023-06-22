@@ -923,8 +923,8 @@ header nav ul li:hover a {
 
 .projects-wrapper .projects-container .project-box .box-content .buttons {
   position: absolute;
-  bottom: 5%;
-  left: 3%;
+  bottom: 2%;
+  left: 3.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
