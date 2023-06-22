@@ -66,27 +66,23 @@ button {
   border: none;
   border: 0.2rem solid var(--fourth);
   border-radius: 0.5rem;
+  text-transform: uppercase;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   align-self: flex-start;
 }
 
-button:hover {
+a {
+  color: var(--first);
+}
+
+a:hover button {
   color: var(--fourth);
   background-color: transparent;
   border: 0.2rem solid var(--fourth);
 }
 
-button a {
-  text-transform: uppercase;
-  color: var(--first);
-}
-
-button:hover a {
-  color: var(--fourth);
-}
-
-button a i {
+button i {
   margin-left: 1rem;
   animation: arrowMove 1s infinite;
 }
