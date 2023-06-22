@@ -72,11 +72,11 @@ button {
   align-self: flex-start;
 }
 
-a {
+a button {
   color: var(--first);
 }
 
-a:hover button {
+a button:hover {
   color: var(--fourth);
   background-color: transparent;
   border: 0.2rem solid var(--fourth);
@@ -512,7 +512,7 @@ header nav ul li:hover a {
   margin-top: 2rem;
 }
 
-.about-wrapper .resumeBtn a i {
+.about-wrapper .resumeBtn i {
   animation: none;
 }
 
@@ -934,7 +934,6 @@ header nav ul li:hover a {
   .box-content
   .buttons
   button {
-  color: var(--first);
   padding: 1rem 9rem;
 }
 
@@ -943,17 +942,7 @@ header nav ul li:hover a {
   .project-box
   .box-content
   .buttons
-  button:hover {
-  color: var(--fourth);
-}
-
-.projects-wrapper
-  .projects-container
-  .project-box
-  .box-content
-  .buttons
   button
-  a
   i {
   animation: none;
 }
@@ -1079,15 +1068,18 @@ header nav ul li:hover a {
 .right-side .message-box {
   min-height: 11rem;
 }
+
 .right-side .input-box textarea {
   padding-top: 0.6rem;
 }
+
 .LetsTalkBtn {
   color: var(--first);
 }
 
 .LetsTalkBtn i {
   margin-left: 0.5rem;
+  animation: none;
 }
 
 @media (max-width: 900px) {
