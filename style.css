@@ -436,6 +436,10 @@ header nav ul li:hover a {
   width: 40rem;
 }
 
+.workLinkBtn {
+  width: 17.8rem;
+}
+
 @media only screen and (max-width: 900px) {
   .home-wrapper {
     flex-direction: column;
@@ -514,6 +518,10 @@ header nav ul li:hover a {
 
 .about-wrapper .resumeBtn i {
   animation: none;
+}
+
+.resumeLinkBtn {
+  width: 15rem;
 }
 
 @media only screen and (max-width: 900px) {
