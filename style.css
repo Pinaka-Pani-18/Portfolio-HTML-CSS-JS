@@ -709,8 +709,8 @@ header nav ul li:hover a {
 }
 
 .skills-wrapper .skills-container .skill {
-  width: 15rem;
-  height: 15rem;
+  width: 10rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -724,8 +724,8 @@ header nav ul li:hover a {
 .skills-wrapper .skills-container .skill::after {
   content: "";
   position: absolute;
-  width: 13rem;
-  height: 13rem;
+  width: 10rem;
+  height: 10rem;
   background-color: var(--sixth);
   z-index: -6;
   border-radius: 2rem;
@@ -740,13 +740,13 @@ header nav ul li:hover a {
 }
 
 .skills-wrapper .skills-container .skill img {
-  width: 5rem;
+  width: 3rem;
   margin-top: -1rem;
 }
 
 .skills-wrapper .skills-container .skill p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
   background-color: var(--first);
